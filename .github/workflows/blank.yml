@@ -30,6 +30,8 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
+        env:
+          secret: cat refs.txt 
         run: |
-          echo "variable Test: $(cat refs.txt)"
+          echo "variable Test: $secret"
 
