@@ -24,8 +24,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
+      # - name: Output secret name
+      #   run: |
+      #     echo "secret-name=$the_secret" >> "$GITHUB_OUTPUT"
+
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          echo "variable Test: ${{ vars.TEST }}"
+          secret=$(cat refs.txt)
+          echo "variable Test: $secret"
 
