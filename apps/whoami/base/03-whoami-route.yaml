@@ -5,16 +5,16 @@ metadata:
   namespace: whoami
 spec:
   parentRefs:
-  - name: traefik-gateway
-    namespace: traefik
+    - name: traefik-gateway
+      namespace: traefik
   # hostnames:
-  # - whoami.myexample.io
+  #   - whoami.myexample.io
   rules:
-  - matches:
-    - path:
-        type: PathPrefix
-        value: /
-    backendRefs:
-    - name: whoami
-      namespace: whoami
-      port: 80
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /who
+      backendRefs:
+        - name: whoami
+          namespace: whoami
+          port: 80
