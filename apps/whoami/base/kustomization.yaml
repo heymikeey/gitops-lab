@@ -1,0 +1,4 @@
+resources:
+  - 01-whoami-dep.yaml
+  - 02-whoami-svc.yaml
+  - 03-whoami-route.yaml
